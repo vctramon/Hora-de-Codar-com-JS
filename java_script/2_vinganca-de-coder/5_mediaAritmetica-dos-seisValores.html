@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let lista = [] // 0,1,2,3,4,5 <- valores
+        let variaveis = 0
+
+        while(lista.length < 6){
+            variaveis = Number(prompt('Coloque um número')) 
+            lista.push(variaveis)
+        }
+
+        let soma = lista.reduce((acumulador, atual) => acumulador + atual, 0);
+        let media = soma / 6;
+
+        alert(`A soma dos valores é: ${soma}\nA média dos valores é: ${media}`);
+    
+    </script>
+</body>
+</html>

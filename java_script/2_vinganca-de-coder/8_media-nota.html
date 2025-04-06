@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+     
+    
+    let soma = 0
+    //inteiro media
+
+  let m1 = Number(prompt("Nota 1: "));
+
+
+  while(m1 < 0 || m1 > 10){
+    alert("\nColoque um numero maior que 0 ou menor que 10\n")
+    m1 = Number(prompt("Nota 1: "));
+    soma = soma + m1
+  }
+
+
+   let m2 = Number(prompt("Nota 2: "));
+
+    while(m2 < 0 || m2 > 10){
+    alert("Coloque um numero maior que 0 ou menor que 10\n")
+    m2 = Number(prompt("Nota 2: "));
+    soma = soma + m2
+  }
+
+   let m3 = Number(prompt("Nota 3: "));
+
+    while(m3 < 0 || m3 > 10){
+    alert("Coloque um numero maior que 0 ou menor que 10\n")
+    m3 = Number(prompt("Nota 3: "));
+    soma = soma + m3
+  }
+
+   let m4 = Number(prompt("Nota 4: "));
+
+    while(m4 < 0 || m4 > 10){
+    alert("Coloque um numero maior que 0 ou menor que 10\n")
+    m4 = Number(prompt("Nota 4: "));
+    soma = soma + m4
+  }
+
+  let media = soma / 4
+
+  if(media > 5){
+    console.log("\nParabuens você passou\n")
+  } else {
+    console.log("\nTem que estudar mais meu parceiro, você não passou\n")
+  }
+
+</script>
+<body>
+    
+</body>
+</html>

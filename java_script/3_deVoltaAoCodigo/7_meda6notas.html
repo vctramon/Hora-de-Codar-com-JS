@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    let soma = 0;
+    let notas = [];
+
+    for (let i = 1; i <= 6; i++) {
+        let nota = Number(prompt(`Informe sua ${i}ª nota:`));
+
+        if (nota < 0 || nota > 10) {
+            alert("Por favor, insira um número entre 0 e 10.");
+            i--; 
+        } else {
+            notas.push(nota); 
+            soma += nota; 
+        }
+    }
+
+    let media = soma / 6; 
+
+    if (media >= 7) {
+        alert(`Parabéns! Sua média foi ${media.toFixed(2)} e você foi aprovado.`);
+    } else if (media >= 5) {
+        alert(`Você ficou de recuperação com média ${media.toFixed(2)}.`);
+    } else {
+        alert(`Infelizmente sua média foi ${media.toFixed(2)} e você foi reprovado.`);
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>

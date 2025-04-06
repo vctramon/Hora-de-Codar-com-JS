@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    let valores = [];
+
+    for (let i = 1; i <= 10; i++) {
+        let valor = Number(prompt(`Coloque o ${i}º valor:`));
+        valores.push(valor); 
+    }
+   
+    for (let i = 0; i < valores.length; i++) {
+        if (valores[i] >= 24 && valores[i] <= 42) {
+            console.log(`${valores[i]} está entre 24 e 42`);
+        } else {
+            console.log(`${valores[i]} está fora do intervalo entre 24 e 42`);
+        }
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>

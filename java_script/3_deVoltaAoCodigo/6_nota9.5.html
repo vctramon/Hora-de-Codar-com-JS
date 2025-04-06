@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+let totalAprovados = 0;
+
+function inicio(){
+    calcularNota();
+}
+
+function calcularNota(){
+    let n1 = Number(prompt('Coloque a primeira nota:'));
+
+    while(n1 > 10 || n1 < 0){
+        alert('Digite uma nota válida');
+        n1 = Number(prompt('Coloque a primeira nota:'));
+    }
+
+    let n2 = Number(prompt('Coloque a segunda nota:'));
+
+    while(n2 > 10 || n2 < 0){
+        alert('Digite uma nota válida');
+        n2 = Number(prompt('Coloque a segunda nota:'));
+    }
+
+    let resultado = (n1 + n2) / 2;
+
+    if (resultado >= 9.5){
+        alert("Parabéns! Você foi aprovado.");
+        totalAprovados++; 
+        calcularDenovo();        
+    } else {
+        alert("Infelizmente você não foi aprovado.");
+        calcularDenovo();
+    }
+}
+
+function calcularDenovo(){
+    let resultado = prompt("Calcular a média de outro aluno? (S/N): ").toUpperCase();
+
+    if(resultado === 'S'){
+        calcularNota();
+    } else if(resultado === 'N'){
+        alert(`A quantidade de alunos aprovados foi: ${totalAprovados}`);
+    } else {
+        alert('Opção incorreta');
+        calcularDenovo();
+    }
+}
+
+inicio();
+
+</script>
+<body>
+    
+</body>
+</html>
